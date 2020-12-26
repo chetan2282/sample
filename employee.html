@@ -1,0 +1,131 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function len(input)
+{ 
+var f = document.form1.nmm.value; 
+var m = 12;
+input.value=f;
+if(input.value > m || input.value < m )
+{ 
+alert("Aadhar Number should be 12 digits");
+return false;
+}
+else
+{ 
+return true;
+}
+}
+	</script>
+
+<script type="text/javascript">
+
+	function xyz(input)
+{ 
+var f = document.form1.sal.value; 
+var m = 0;
+input.value=f;
+if(input.value <= 0)
+{ 
+alert("Salary can't be 0 or less");
+return false;
+}
+else
+{ 
+return true;
+}
+}
+	</script>
+</head>
+<body> 
+
+ 
+	
+ <div align="center">
+ 
+ <h1> Employee Details form </h1>
+ 
+ <form name="form1" action="11.html" method="post">
+ 
+ <table>
+ 
+ <tr>
+ <td> Name </td>
+ <td> <input type="text" name="nm"  /> </td>
+ </tr>
+ 
+ <tr>
+ <td> Aadhar number </td>
+ <td> <input type="text" name="nmm" id="abc" onclick="len(this)"  /> </td>
+ </tr>
+ 
+ <tr>
+ <td> Department </td>
+ <td> 
+ <select>
+ <option>IT</option>
+ <option>Sales</option>
+ <option>RnD</option>
+ <option>HR</option> 
+ </select>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td> Marital status </td>
+ <td> 
+ <input type="radio" id="male" name="gender" value="male">
+ <label for="male">Male</label><br>
+ <input type="radio" id="female" name="gender" value="female">
+ <label for="female">Female</label><br>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td> Phone no. </td>
+ <td> <input type="text" name="phn"  /> </td>
+ </tr>
+ 
+ <tr>
+ <td> EmailID </td>
+ <td> <input type="text" name="email" required /> </td>
+ </tr>
+ 
+ <tr>
+ <td> Education </td>
+ <td> <input type="text" name="edu"/> </td>
+ </tr>
+ 
+ <tr>
+ <td> Product Supplier Address</td>
+ <td> <input type="text" name="ad"/> </td>
+ </tr>
+ 
+ <tr>
+ <td> Address </td>
+ <td> <input type="textarea" name="add"/> </td>
+ </tr>
+ 
+ 
+ <tr>
+ <td> Salary </td>
+ <td> <input type="text" name="sal" onclick="xyz(this)" /> </td>
+ </tr>
+ 
+ 
+ 
+ <br>
+ <br>
+ <tr>
+ <td> <input type="submit" name="sub" value="Submit"/> </td>
+ <td> <input type="reset"  Value="Reset" /> </td>
+ </tr>
+ 
+ </table>
+ </form>
+ 
+	</div>
+
+</body>	
+</html>

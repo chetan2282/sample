@@ -1,0 +1,107 @@
+<html>
+ <head>
+	<script type="text/javascript">
+
+	function b(input){
+		var regex = /[^0-9]/gi;
+		input.value = input.value.replace(regex, " ");
+        }
+	</script>
+	
+	
+	<script type="text/javascript">
+
+	function len(input)
+{ 
+var f = document.form1.pr.value; 
+var m = 0;
+input.value=f;
+if(input.value <= 0)
+{ 
+alert("Price can't be 0 or less");
+return false;
+}
+else
+{ 
+return true;
+}
+}
+	</script>
+	
+
+ </head>
+<body> 
+ 
+ <div align="center">
+ 
+ <h1> Add product form </h1>
+ 
+ <form name="form1" action="addpro.php" method="post">
+ 
+ <table>
+ 
+ <tr>
+ <td> Product Name </td>
+ <td> <input type="text" name="pnm" required /> </td>
+ </tr>
+ 
+ <tr>
+ <td> Product Category </td>
+ <td> 
+ <select name="ca" required>
+	<option> Clothes </option>
+	<option> Electronic </option>
+	<option> Home decor </option>
+ </select>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td> Product Price </td>
+ <td> <input type="text" name="pr" id="pr1" onkeyup="len(this)"  /> </td>
+ </tr>
+ 
+ <tr>
+ <td> Expiry date </td>
+ <td> <input type="date" name="exp"/> </td>
+ </tr>
+ 
+ <tr>
+ <td> ID no. </td>
+ <td> <input type="int" name="id" onkeyup="b(this)"  required /> </td>
+ </tr>
+ 
+ <tr>
+ <td> Product Supplier </td>
+ <td> <input type="text" name="sup"/> </td>
+ </tr>
+ 
+ <tr>
+ <td> Quantity </td>
+ <td> <input type="int" name="qu"/> </td>
+ </tr>
+ 
+ <tr>
+ <td> Product Supplier Address</td>
+ <td> <input type="text" name="ad"/> </td>
+ </tr>
+ 
+ <tr>
+ <td> Product Image </td>
+ <td> <input type="file" name="im"/> </td>
+ </tr>
+ 
+ <br>
+ <br>
+ <tr>
+ <td> <input type="submit" name="sub" value="Submit"/> </td>
+ <td> <input type="reset"  Value="Reset" /> </td>
+ </tr>
+ 
+ </table>
+ </form>
+ 
+	</div>
+
+</body>	
+</html>
